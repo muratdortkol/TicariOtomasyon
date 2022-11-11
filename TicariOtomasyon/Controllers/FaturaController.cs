@@ -65,6 +65,13 @@ namespace TicariOtomasyon.Controllers
             return RedirectToAction("Index");
 
         }
+        public ActionResult Dinamik()
+        {
+            Sinif4 cs = new Sinif4();
+            cs.deger1 = c.Faturalars.ToList();
+            cs.deger2 = c.FaturaKalems.ToList();
+            return View(cs);
+        }
 
     }
 }

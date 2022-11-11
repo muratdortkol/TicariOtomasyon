@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using TicariOtomasyon.Models.Siniflar;
 
 namespace TicariOtomasyon.Controllers
@@ -16,6 +17,7 @@ namespace TicariOtomasyon.Controllers
             var degerler = c.Departmans.Where(x => x.Durum == true).ToList();
             return View(degerler);
         }
+        [Authorize(Roles="A")] // Yetkisi A ise departman ekleyebilir
         [HttpGet]
         public ActionResult DepartmanEkle()
         {

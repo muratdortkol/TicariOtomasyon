@@ -8,6 +8,7 @@ using TicariOtomasyon.Models.Siniflar;
 
 namespace TicariOtomasyon.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         // GET: Login
